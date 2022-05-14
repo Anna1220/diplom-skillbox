@@ -1,0 +1,23 @@
+:root {
+  /* colors */
+  --black: #000000;
+  --dark: #333333;
+  --white: #ffffff;
+  --violet-light: #C283F3;
+  --violet-ultra-light: #d1a9f0;
+  --violet-dark: #7943a4;
+  --violet-middle: #9D5CD0;
+  --transparent-dark-4: rgba(0, 0, 0, 0.4);
+  --transparent-dark-6: rgba(0, 0, 0, 0.6);
+  --transparent-dark-9: rgba(0, 0, 0, 0.9);
+  --transparent-rose: rgba(194, 131, 243, 0.4);
+
+
+  /* sizes */
+  --container-max: 1700px;
+  --container-padding: 50px;
+
+  /* transition */
+  --short: .3s ease;
+
+} 
