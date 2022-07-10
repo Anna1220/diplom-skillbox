@@ -37,6 +37,17 @@
   width: calc(1250 / 1600 * 100%);
 }
 
+.header__nav.is-burger-opened {
+  display: flex;
+  animation-name: menu-open;
+  animation-duration: var(--middle);
+}
+
+.header__nav.is-burger-closed {
+  animation-name: menu-close;
+  animation-duration: var(--middle);
+}
+
 .header__menu {
   flex-wrap: wrap;
 }
@@ -50,6 +61,7 @@
 }
 
 .header__service-links {
+  flex-shrink: 0;
   max-width: 220px;
 }
 
@@ -87,6 +99,17 @@
   right: var(--container-padding);
   color: var(--white);
   transform: translateY(calc(100% + 30px + 25px));
+}
+
+.header__search.is-search-opened {
+  display: flex;
+  animation-name: search-open;
+  animation-duration: var(--short);
+}
+
+.header__search.is-search-closed {
+  animation-name: search-close;
+  animation-duration: var(--short);
 }
 
 .header__search-input,
@@ -333,10 +356,6 @@
     margin-right: 0;
   }
 
-  .header__nav-link {
-    padding-right: 60px;
-  }
-
   .header__account {
     display: inline-flex;
     justify-content: center;
@@ -345,6 +364,15 @@
     padding: 20px;
     border: 2px solid var(--violet-middle);
     border-radius: 100px;
+    transition: background-color var(--short) color var(--short);
+  }
+
+  .link.header__account::before {
+    display: none;
+  }
+
+  .header__account:focus:not(:hover):not(:active) {
+    background-color: var(--violet-middle);
   }
 
   .header__search {
@@ -354,17 +382,6 @@
     width: 314px;
     bottom: 5px;
     transform: translateY(0);
-  }
-
-  .header__search.is-opened {
-    display: flex;
-    animation-name: search-open;
-    animation-duration: .3s;
-  }
-
-  .header__search.is-closed {
-    animation-name: search-close;
-    animation-duration: .3s;
   }
 
   .header__search-input,
@@ -395,6 +412,7 @@
 
   .header__search-btn_open {
     margin-right: 0;
+    transition: opacity var(--short);
   }
 
   .header__search-btn_close {
@@ -470,6 +488,8 @@
     margin-right: 0;
     width: calc(180 / 290 * 100%);
     flex-grow: 0;
+    padding-bottom: 0;
+    font-size: 14px;
   }
 
   .header__search-btn_close {

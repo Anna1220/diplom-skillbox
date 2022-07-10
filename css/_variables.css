@@ -11,13 +11,16 @@
   --transparent-dark-6: rgba(0, 0, 0, 0.6);
   --transparent-dark-9: rgba(0, 0, 0, 0.9);
   --transparent-rose: rgba(194, 131, 243, 0.4);
+  --background-helper: grey;
 
 
   /* sizes */
   --container-max: 1700px;
   --container-padding: 50px;
+  --burger-line: 3px;
 
   /* transition */
-  --short: .3s ease;
+  --short: .3s;
+  --middle: .5s;
 
-} 
+}

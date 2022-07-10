@@ -7,75 +7,76 @@
     <title>Blanchard - художественная галерея</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/swiper@8.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <script defer src="js/settings.js"></script>
     <script defer src="js/simplebar.min.js"></script>
+    <script defer src="js/swiper@8.min.js"></script>
     <script defer src="js/dropdowns.js"></script>
-    <script defer src="js/toggleForm.js"></script>
+    <script defer src="js/search-form.js"></script>
+    <script defer src="js/burger.js"></script>
+    <script defer src="js/top-wrapper-swiper.js"></script>
+    <!--choices-->
+    <!--gallery-->
+    <!--tabs-->
+    <!--catalog-->
+    <script defer scr="js/scroll.js"></script>
+    <!--partners-slider-->
+    <!--events-slider-->
 </head>
 <body>
-  <header class="header">
-    <div class="header__top">
-      <div class="container header__container">
-        <button class="header__burger burger" type="button">
-          <span class="burger__line"></span>
-        </button>
+  <h1 class="visually-hidden">Blanchard - виртуальная художественная галерея</h1>
+  <div class="top-wrapper">
+    <header class="header top-wrapper__header">
+      <div class="header__top">
+        <div class="container header__container">
+          <button class="header__burger burger js-burger" type="button" aria-label="Открыть главное меню">
+            <span class="burger__line"></span>
+          </button>
 
-        <a class="header__logo logo">
-          <img class="logo__image" src="img/logo.svg" alt="Логотип Blanchard" width="97" height="22">
-        </a>
+          <a class="header__logo logo">
+            <img class="logo__image" src="img/logo.svg" alt="Логотип Blanchard" width="97" height="22">
+          </a>
 
-        <nav class="header__nav">
-          <ul class="header__menu reset-list">
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">О нас</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">Галерея</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">Каталог</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">События</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">Проекты</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link link"><span class="header__link-text link__text">Контакты</span></a>
-            </li>
-          </ul>
+          <nav class="header__nav js-menu-wrap">
+            <ul class="header__menu reset-list">
+              <li class="header__nav-item">
+                <a href="#about" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">О нас</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#gallery" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">Галерея</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#catalog" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">Каталог</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#events" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">События</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#projects" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">Проекты</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts" class="header__nav-link link js-menu-links js-scroll-link"><span class="header__link-text link__text">Контакты</span></a>
+              </li>
+            </ul>
 
-          <div class="header__service-links">
-            <a class="header__account link" href="#">
-              <span class="header__account-content link__text">
-                <svg class="header__account-arrow" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839
-                  5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5
-                  12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
-                  fill="currentColor"/>
-                </svg>
-                <span class="header__link-text">Войти</span>
-              </span>
-            </a>
-          </div>
-        </nav>
+            <div class="header__service-links">
+              <a class="header__account link" href="#">
+                <span class="header__account-content link__text">
+                  <svg class="header__account-arrow" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839
+                    5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5
+                    12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+                    fill="currentColor"/>
+                  </svg>
+                  <span class="header__link-text">Войти</span>
+                </span>
+              </a>
+            </div>
+          </nav>
 
-        <button class="header__search-btn header__search-btn_open link js-open-search" type="button">
-          <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
-            fill="currentColor"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2
-            12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228
-            2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-            fill="currentColor"/>
-          </svg>
-        </button>
-
-        <form class="header__search js-search-form" action="/">
-          <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-          <button class="header__search-btn header__search-btn_submit link" type="submit">
+          <button class="header__search-btn header__search-btn_open link js-open-search" type="button" aria-label="Открыть форму поиска">
             <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
               fill="currentColor"/>
@@ -85,237 +86,269 @@
               fill="currentColor"/>
             </svg>
           </button>
-          <button class="header__search-btn header__search-btn_close link js-close-search" type="button">
-            <svg class="link__text link__icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)" fill="currentColor"/>
-              <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)" fill="currentColor"/>
-            </svg>
-          </button>
-        </form>
+
+          <form class="header__search js-search-form" action="/">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <button class="header__search-btn header__search-btn_submit link" type="submit" aria-label="Выполнить форму">
+              <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
+                fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2
+                12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228
+                2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="currentColor"/>
+              </svg>
+            </button>
+            <button class="header__search-btn header__search-btn_close link js-close-search" type="button" aria-label="Закрыть форму поиска">
+              <svg class="link__text link__icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)" fill="currentColor"/>
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)" fill="currentColor"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="header__bottom">
+        <div class="container header__container">
+          <ul class="header__bottom-menu reset-list">
+            <li class="header__bottom-item">
+              <button class="link header__bottom-btn js-header-dropdown-btn" data-path="one">
+                <span class="link__text header__bottom-link-text">Реализм</span>
+              </button>
+
+              <div class="header__dropdown js-header-drop" data-target="one">
+                <div class="header__dropdown-wrap" data-simplebar>
+                  <ul class="header__drop-list reset-list">
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторетто</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/fridrich-link.jpg');">
+                        <span class="header__dropdown-link-text">Фридрих</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/leonardo-link.jpg');">
+                        <span class="header__dropdown-link-text">Леонардо</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/verrokk-link.png');">
+                        <span class="header__dropdown-link-text">Верроккьо</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="header__bottom-item">
+              <button class="link header__bottom-btn js-header-dropdown-btn" data-path="two">
+                <span class="link__text header__bottom-link-text">Импрессионизм</span>
+              </button>
+
+              <div class="header__dropdown js-header-drop" data-target="two">
+                <div class="header__dropdown-wrap" data-simplebar>
+                  <ul class="header__drop-list reset-list">
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/mone-link.jpg');">
+                        <span class="header__dropdown-link-text">Моне</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/sisley-link.jpg');">
+                        <span class="header__dropdown-link-text">Сислей</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/mane-link.jpg');">
+                        <span class="header__dropdown-link-text">Мане</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/renuar-link.png');">
+                        <span class="header__dropdown-link-text">Ренуар</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="header__bottom-item">
+              <button class="link header__bottom-btn js-header-dropdown-btn" data-path="three">
+                <span class="link__text header__bottom-link-text">Постимпрессионизм</span>
+              </button>
+
+              <div class="header__dropdown js-header-drop" data-target="three">
+                <div class="header__dropdown-wrap" data-simplebar>
+                  <ul class="header__drop-list reset-list">
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/van-gog-link.jpg');">
+                        <span class="header__dropdown-link-text">Ван Гог</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/sezann-link.jpg');">
+                        <span class="header__dropdown-link-text">Сезанн</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/gogen-link.jpg');">
+                        <span class="header__dropdown-link-text">Гоген</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/sera-link.jpg');">
+                        <span class="header__dropdown-link-text">Сёра</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="header__bottom-item">
+              <button class="link header__bottom-btn js-header-dropdown-btn" data-path="four">
+                <span class="link__text header__bottom-link-text">Авангард</span>
+              </button>
+
+              <div class="header__dropdown js-header-drop" data-target="four">
+                <div class="header__dropdown-wrap" data-simplebar>
+                  <ul class="header__drop-list reset-list">
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/kandinskiy-link.jpg');">
+                        <span class="header__dropdown-link-text">Кандинский</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/marinetti-link.jpg');">
+                        <span class="header__dropdown-link-text">Маринетти</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/malevich-link.jpg');">
+                        <span class="header__dropdown-link-text">Малевич</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/pikasso-link.jpg');">
+                        <span class="header__dropdown-link-text">Пикассо</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="header__bottom-item">
+              <button class="link header__bottom-btn js-header-dropdown-btn" data-path="five">
+                <span class="link__text header__bottom-link-text">Футуризм</span>
+              </button>
+
+              <div class="header__dropdown js-header-drop" data-target="five">
+                <div class="header__dropdown-wrap" data-simplebar>
+                  <ul class="header__drop-list reset-list">
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/karra-link.jpg');">
+                        <span class="header__dropdown-link-text">Карра</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/pratella-link.jpg');">
+                        <span class="header__dropdown-link-text">Прателла</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/severini-link.jpg');">
+                        <span class="header__dropdown-link-text">Северини</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/balla-link.jpg');">
+                        <span class="header__dropdown-link-text">Балла</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                    <li class="header__dropdown-item">
+                      <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
+                        <span class="header__dropdown-link-text">Тинторрето</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero top-wrapper__hero">
+      <div class="container">
+        <div class="hero__content">
+          <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
+          <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+          <a href="#" class="hero__btn btn btn_fill">Подписаться на рассылку</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="top-wrapper__slider js-back-slider">
+      <div class="swiper-wrapper">
+        <div class="top-wrapper__slide swiper-slide" style="background-image: url('img/top-back-1-desk.jpg');"></div>
+        <div class="top-wrapper__slide swiper-slide" style="background-image: url('img/top-back-2-desk.jpg');"></div>
+        <div class="top-wrapper__slide swiper-slide" style="background-image: url('img/top-back-3-desk.jpg');"></div>
       </div>
     </div>
-
-
-    <div class="header__bottom">
-      <div class="container header__container">
-        <ul class="header__bottom-menu reset-list">
-          <li class="header__bottom-item">
-            <button class="link header__bottom-btn js-header-dropdown-btn" data-path="one">
-              <span class="link__text header__bottom-link-text">Реализм</span>
-            </button>
-
-            <div class="header__dropdown js-header-drop" data-target="one">
-              <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list">
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторетто</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/fridrich-link.jpg');">
-                      <span class="header__dropdown-link-text">Фридрих</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/leonardo-link.jpg');">
-                      <span class="header__dropdown-link-text">Леонардо</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/verrokk-link.png');">
-                      <span class="header__dropdown-link-text">Верроккьо</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="header__bottom-item">
-            <button class="link header__bottom-btn js-header-dropdown-btn" data-path="two">
-              <span class="link__text header__bottom-link-text">Импрессионизм</span>
-            </button>
-
-            <div class="header__dropdown js-header-drop" data-target="two">
-              <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list">
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/mone-link.jpg');">
-                      <span class="header__dropdown-link-text">Моне</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/sisley-link.jpg');">
-                      <span class="header__dropdown-link-text">Сислей</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/mane-link.jpg');">
-                      <span class="header__dropdown-link-text">Мане</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/renuar-link.png');">
-                      <span class="header__dropdown-link-text">Ренуар</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="header__bottom-item">
-            <button class="link header__bottom-btn js-header-dropdown-btn" data-path="three">
-              <span class="link__text header__bottom-link-text">Постимпрессионизм</span>
-            </button>
-
-            <div class="header__dropdown js-header-drop" data-target="three">
-              <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list">
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/van-gog-link.jpg');">
-                      <span class="header__dropdown-link-text">Ван Гог</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/sezann-link.jpg');">
-                      <span class="header__dropdown-link-text">Сезанн</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/gogen-link.jpg');">
-                      <span class="header__dropdown-link-text">Гоген</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/sera-link.jpg');">
-                      <span class="header__dropdown-link-text">Сёра</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="header__bottom-item">
-            <button class="link header__bottom-btn js-header-dropdown-btn" data-path="four">
-              <span class="link__text header__bottom-link-text">Авангард</span>
-            </button>
-
-            <div class="header__dropdown js-header-drop" data-target="four">
-              <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list">
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/kandinskiy-link.jpg');">
-                      <span class="header__dropdown-link-text">Кандинский</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/marinetti-link.jpg');">
-                      <span class="header__dropdown-link-text">Маринетти</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/malevich-link.jpg');">
-                      <span class="header__dropdown-link-text">Малевич</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/pikasso-link.jpg');">
-                      <span class="header__dropdown-link-text">Пикассо</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="header__bottom-item">
-            <button class="link header__bottom-btn js-header-dropdown-btn" data-path="five">
-              <span class="link__text header__bottom-link-text">Футуризм</span>
-            </button>
-
-            <div class="header__dropdown js-header-drop" data-target="five">
-              <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list">
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/karra-link.jpg');">
-                      <span class="header__dropdown-link-text">Карра</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/pratella-link.jpg');">
-                      <span class="header__dropdown-link-text">Прателла</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/severini-link.jpg');">
-                      <span class="header__dropdown-link-text">Северини</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/balla-link.jpg');">
-                      <span class="header__dropdown-link-text">Балла</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                  <li class="header__dropdown-item">
-                    <a href="#" class="header__dropdown-link" style="background-image: url('img/tintorretto-link.jpg');">
-                      <span class="header__dropdown-link-text">Тинторрето</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
+  </div>
 </body>
 </html>

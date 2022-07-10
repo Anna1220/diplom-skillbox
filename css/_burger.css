@@ -11,12 +11,13 @@
 .burger__line {
   position: absolute;
   left: 0;
-  top: calc(50% - 3px / 2);
+  top: calc(50% - var(--burger-line) / 2);
   width: 100%;
-  height: 3px;
+  height: var(--burger-line);
   background-color: var(--white);
   transform: scaleX(calc(28 / 36));
   transform-origin: left;
+  transition: background-color var(--short), opacity var(--short);
 }
 
 .burger::after,
@@ -25,9 +26,10 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: var(--burger-line);
   background-color: var(--white);
   transform-origin: left;
+  transition: background-color var(--short);
 }
 
 .burger::before {
@@ -39,21 +41,74 @@
   transform: scaleX(calc(24 / 36));
 }
 
+.burger:hover .burger__line,
+.burger:hover::before,
+.burger:hover::after {
+  background-color: var(--violet-light);
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.burger:focus .burger__line,
+.burger:focus::before,
+.burger:focus::after {
+  background-color: var(--violet-middle);
+}
+
+.burger.is-burger-opened .burger__line,
+.burger.is-burger-closed .burger__line {
+  opacity: 0;
+}
+
+.is-burger-opened.burger::after,
+.is-burger-opened.burger::before,
+.is-burger-closed.burger::after,
+.is-burger-closed.burger::before {
+  transform-origin: center;
+}
+
+.is-burger-opened.burger::before {
+  top: calc(50% - var(--burger-line) / 2);
+  transform: rotate(45deg);
+  animation-name: burger-before-open;
+  animation-duration: var(--middle);
+}
+
+.is-burger-opened.burger::after {
+  bottom: calc(50% - var(--burger-line) / 2);
+  transform: scaleX(1) rotate(-45deg);
+  animation-name: burger-after-open;
+  animation-duration: var(--middle);
+}
+
+.is-burger-closed.burger::before {
+  top: calc(50% - var(--burger-line) / 2);
+  transform: rotate(45deg);
+  animation-name: burger-before-close;
+  animation-duration: var(--middle);
+}
+
+.is-burger-closed.burger::after {
+  bottom: calc(50% - var(--burger-line) / 2);
+  transform: scaleX(1) rotate(-45deg);
+  animation-name: burger-after-close;
+  animation-duration: var(--middle);
+}
+
 @media (max-width: 610px) {
+  :root {
+    --burger-line: 2px;
+  }
+
   .burger {
     width: 25px;
     height: 18px;
   }
 
   .burger__line {
-    top: calc(50% - 2px / 2);
     transform: scaleX(calc(16 / 25));
-  }
-
-  .burger__line,
-  .burger::after,
-  .burger::before {
-    height: 2px;
   }
 
   .burger::after {
